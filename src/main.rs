@@ -64,7 +64,7 @@ fn main() {
     for stream in listener.incoming() {
         let stream = stream.unwrap();
         let message = "Hello, World";
-        let status = "HTTP/1.1 200 OK\r\n\r\n";
+        let status = "HTTP/1.1 200 OK";
         let handle = ConnectionHandler::new(&stream, &message, &status);
     }
 }
